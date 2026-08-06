@@ -194,6 +194,30 @@ export const projectsData = [
         { label: "Facial Landmarks", val: "128 Points" }
       ]
     }
+  },
+  {
+    id: "3d-interactive-portfolio",
+    title: "Interactive 3D Developer Portfolio & Universe",
+    subtitle: "Modern WebGL, Three.js & React Three Fiber Showcase",
+    category: "3D Web & Interactive Systems",
+    featured: true,
+    tags: ["React", "Three.js", "React Three Fiber", "Tailwind CSS", "Vite", "WebGL", "Framer Motion", "Lucide Icons"],
+    github: "https://github.com/golden7667/3d-portfolio",
+    live: "http://localhost:5173",
+    summary: "Architected an immersive 3D developer portfolio featuring real-time interactive starfields, dynamic lighting, 3D Canvas rendering, and sleek glassmorphism UI.",
+    details: [
+      "Built with React Three Fiber & Three.js enabling 60+ FPS hardware-accelerated WebGL graphics directly in the browser.",
+      "Interactive 3D particle universe with smooth mouse physics, parallax camera movements, and audio feedback engine.",
+      "Responsive glassmorphism architecture with dark mode design system, custom UI controls, and skill radar visuals.",
+      "Integrated interactive machine learning inference simulators, project deep-dive modals, and real-time contact forms."
+    ],
+    demoData: {
+      stats: [
+        { label: "Render Frame Rate", val: "60 FPS (WebGL)" },
+        { label: "3D Particle Count", val: "5,000+ Dynamic" },
+        { label: "UI Architecture", val: "R3F + Tailwind" }
+      ]
+    }
   }
 ];
 

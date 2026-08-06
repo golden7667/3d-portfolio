@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import BackgroundCanvas from './components/canvas/BackgroundCanvas';
 import Navbar from './components/navbar/Navbar';
 import Hero from './components/sections/Hero';
@@ -15,6 +17,10 @@ export default function App() {
   return (
     <div className="relative min-h-screen bg-[#050811] text-slate-100 font-outfit overflow-x-hidden selection:bg-cyan-500 selection:text-black">
       
+      {/* Vercel Analytics & Insights */}
+      <Analytics />
+      <SpeedInsights />
+
       {/* 3D Background Scene */}
       <BackgroundCanvas />
 
@@ -39,3 +45,4 @@ export default function App() {
     </div>
   );
 }
+

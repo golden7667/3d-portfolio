@@ -315,8 +315,53 @@ export default function ProjectModal({ project, onClose }) {
           </div>
         )}
 
+        {/* Interactive 3D Portfolio Telemetry section if 3D Portfolio project */}
+        {project.id === '3d-interactive-portfolio' && (
+          <div className="p-6 rounded-2xl bg-[#090e24] border border-cyan-500/30 mb-8">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-2">
+                <Sparkles className="w-5 h-5 text-cyan-400" />
+                <h4 className="text-base font-bold font-space text-white">
+                  3D WebGL Engine & Real-Time Canvas Matrix
+                </h4>
+              </div>
+              <span className="text-[10px] font-mono px-2.5 py-1 rounded bg-cyan-500/20 text-cyan-300">
+                WebGL 2.0 Canvas
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+              <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+                <span className="text-xs font-mono text-slate-400 block mb-1">Target Frame Rate</span>
+                <span className="text-xl font-bold text-emerald-400 font-mono">60 FPS</span>
+                <span className="text-[10px] text-emerald-400 block mt-1">✓ GPU Hardware Accelerated</span>
+              </div>
+              <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+                <span className="text-xs font-mono text-slate-400 block mb-1">Interactive Particles</span>
+                <span className="text-xl font-bold text-cyan-300 font-mono">5,000 Nodes</span>
+                <span className="text-[10px] text-cyan-400 block mt-1">✓ Real-Time Physics</span>
+              </div>
+              <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+                <span className="text-xs font-mono text-slate-400 block mb-1">Bundle Build Size</span>
+                <span className="text-xl font-bold text-purple-300 font-mono">&lt; 1.2 MB</span>
+                <span className="text-[10px] text-purple-400 block mt-1">✓ Vite Optimized</span>
+              </div>
+            </div>
+
+            <div className="p-4 rounded-xl bg-slate-900 border border-cyan-500/20 text-xs text-slate-300 space-y-2">
+              <div className="font-mono text-cyan-400 font-semibold mb-2">Core 3D Technologies & Visual Features:</div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px] font-mono">
+                <div className="p-2 rounded bg-slate-800/60 border border-slate-700 text-center">✨ React Three Fiber</div>
+                <div className="p-2 rounded bg-slate-800/60 border border-slate-700 text-center">🪐 Dynamic Starfield</div>
+                <div className="p-2 rounded bg-slate-800/60 border border-slate-700 text-center">💎 Glassmorphism UI</div>
+                <div className="p-2 rounded bg-slate-800/60 border border-slate-700 text-center">🔊 Spatial Audio FX</div>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* General Project Stats if present */}
-        {project.demoData && project.demoData.stats && project.id !== 'steel-properties-predictive' && project.id !== 'enterprise-erp-system' && (
+        {project.demoData && project.demoData.stats && project.id !== 'steel-properties-predictive' && project.id !== 'enterprise-erp-system' && project.id !== '3d-interactive-portfolio' && (
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
             {project.demoData.stats.map((st, sIdx) => (
               <div key={sIdx} className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
