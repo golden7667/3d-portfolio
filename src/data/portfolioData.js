@@ -179,7 +179,7 @@ export const projectsData = [
     featured: true,
     tags: ["Python", "FastAPI", "React", "MySQL", "Tailwind CSS", "ReportLab", "REST APIs", "JWT Auth"],
     github: "https://github.com/golden7667",
-    live: "https://enterprise-erp.demo",
+    live: "https://erp-management-system-sandy.vercel.app/accounts/login/",
     summary: "Architected a comprehensive, modular Enterprise Resource Planning (ERP) platform for real-time inventory tracking, HR payroll processing, financial ledger management, and automated report generation.",
     details: [
       "Modular core architecture integrating Inventory Control, HR & Payroll, Sales Order Workflows, and Procurement.",
