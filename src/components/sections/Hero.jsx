@@ -17,6 +17,8 @@ import {
 } from 'lucide-react';
 
 
+import developerImg from '../../assets/developer.jpg';
+
 const titles = [
   "AI & Machine Learning Intern",
   "Full-Stack Web Engineer",
@@ -203,9 +205,22 @@ export default function Hero({ onOpenResumeModal }) {
             </div>
           </div>
 
-          {/* Right Column: 3D Interactive Canvas Scene */}
+          {/* Right Column: 3D Interactive Canvas Scene & Developer Portrait Card */}
           <div className="lg:col-span-5 relative flex items-center justify-center">
             <div className="w-full relative glass-panel rounded-3xl p-4 border border-cyan-500/20 shadow-[0_0_50px_rgba(6,182,212,0.15)]">
+              
+              {/* Floating Developer Portrait Overlay Badge */}
+              <div className="absolute -top-6 -left-4 z-20 flex items-center gap-3 p-2 pr-4 rounded-2xl bg-slate-900/90 border border-cyan-500/40 backdrop-blur-xl shadow-[0_0_25px_rgba(6,182,212,0.3)]">
+                <div className="relative w-14 h-14 rounded-xl overflow-hidden border-2 border-cyan-400 shrink-0">
+                  <img src={developerImg} alt="Golden Kumar" className="w-full h-full object-cover object-top" />
+                  <span className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-400 rounded-full border-2 border-slate-900 animate-pulse" />
+                </div>
+                <div>
+                  <h4 className="text-xs font-bold text-white font-space">Golden Kumar</h4>
+                  <p className="text-[10px] font-mono text-cyan-400">Full-Stack & AI Engineer</p>
+                </div>
+              </div>
+
               <TechGlobe3D />
               
               {/* Quick Info Grid under globe */}

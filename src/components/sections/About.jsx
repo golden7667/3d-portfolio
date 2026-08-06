@@ -2,6 +2,7 @@ import React from 'react';
 import { personalData, competenciesData } from '../../data/portfolioData';
 import { soundManager } from '../../utils/audio';
 import { GraduationCap, Award, Cpu, Code2, Database, CheckCircle2, MapPin, Sparkles } from 'lucide-react';
+import developerImg from '../../assets/developer.jpg';
 
 export default function About() {
   return (
@@ -25,21 +26,36 @@ export default function About() {
         {/* Grid Content */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
-          {/* Main Bio Card */}
+          {/* Main Bio Card with Developer Portrait */}
           <div className="lg:col-span-7 glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between border border-slate-800/80 glass-card-hover">
             <div>
-              <div className="flex items-center justify-between mb-6">
-                <span className="text-xs font-mono text-cyan-400 tracking-wider uppercase">
-                  // About Me
-                </span>
-                <span className="text-xs font-mono px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-slate-400">
-                  Golden Kumar
-                </span>
+              {/* Profile Photo Header */}
+              <div className="flex items-center gap-4 mb-6 pb-6 border-b border-slate-800/80">
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-cyan-400/50 shadow-[0_0_25px_rgba(6,182,212,0.3)] shrink-0 group">
+                  <img
+                    src={developerImg}
+                    alt="Golden Kumar"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <span className="absolute bottom-1 right-1 w-3.5 h-3.5 bg-emerald-400 rounded-full border-2 border-slate-900 animate-pulse" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-xs font-mono text-cyan-400 tracking-wider uppercase">// DEVELOPER PORTRAIT</span>
+                    <span className="px-2 py-0.5 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-300 text-[10px] font-mono">B.Tech CS '26</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white font-space">
+                    Golden Kumar
+                  </h3>
+                  <p className="text-xs font-mono text-slate-400 mt-1">
+                    AI/ML & Full-Stack Systems Engineer
+                  </p>
+                </div>
               </div>
 
-              <h3 className="text-2xl font-bold text-white font-space mb-4">
+              <h4 className="text-xl font-bold text-white font-space mb-4">
                 Bridging Machine Learning & Modern Web Architectures
-              </h3>
+              </h4>
 
               <p className="text-slate-300 text-base leading-relaxed mb-4">
                 I am a Computer Science engineering student at <strong className="text-cyan-300">Vivekananda Global University, Jaipur</strong> graduating in 2026. My technical journey spans building end-to-end Machine Learning platforms—such as predictive analytics platforms for metallurgy and real-time facial recognition attendance systems using OpenCV.
