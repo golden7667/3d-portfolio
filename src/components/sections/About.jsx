@@ -125,7 +125,7 @@ export default function About() {
             <div className="grid grid-cols-2 gap-4">
               <div className="glass-card rounded-2xl p-5 border border-slate-800 text-center hover:border-cyan-500/40 transition-colors">
                 <div className="text-3xl font-extrabold font-space text-cyan-400 mb-1">
-                  7.05
+                  {personalData.education.cgpa}
                 </div>
                 <div className="text-xs font-mono text-slate-400 uppercase tracking-wider">
                   B.Tech CGPA

@@ -8,7 +8,7 @@ export const personalData = {
   education: {
     institution: "Vivekananda Global University",
     degree: "Bachelor of Technology in Computer Science",
-    cgpa: "7.05",
+    cgpa: "7.12",
     year: "2026",
     location: "Jaipur, Rajasthan, India"
   },
@@ -19,7 +19,7 @@ export const personalData = {
     phone: "tel:+917667711403"
   },
   stats: [
-    { label: "B.Tech CGPA", value: "7.05", icon: "GraduationCap" },
+    { label: "B.Tech CGPA", value: "7.12", icon: "GraduationCap" },
     { label: "ML & AI Models", value: "10+", icon: "Cpu" },
     { label: "Full-Stack Apps", value: "8+", icon: "Code2" },
     { label: "Graduation", value: "2026", icon: "Calendar" }
