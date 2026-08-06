@@ -270,6 +270,63 @@ export default function ProjectModal({ project, onClose }) {
           </div>
         )}
 
+        {/* Interactive ERP System Telemetry section if ERP project */}
+        {project.id === 'enterprise-erp-system' && (
+          <div className="p-6 rounded-2xl bg-[#090e24] border border-cyan-500/30 mb-8">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-2">
+                <Database className="w-5 h-5 text-cyan-400" />
+                <h4 className="text-base font-bold font-space text-white">
+                  Enterprise ERP Live Telemetry & Core Modules
+                </h4>
+              </div>
+              <span className="text-[10px] font-mono px-2.5 py-1 rounded bg-cyan-500/20 text-cyan-300">
+                System Overview
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+              <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+                <span className="text-xs font-mono text-slate-400 block mb-1">Inventory SKU Stock</span>
+                <span className="text-xl font-bold text-cyan-300 font-mono">14,280 Units</span>
+                <span className="text-[10px] text-emerald-400 block mt-1">✓ Automated Stock Reorder</span>
+              </div>
+              <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+                <span className="text-xs font-mono text-slate-400 block mb-1">Monthly Payroll Processed</span>
+                <span className="text-xl font-bold text-purple-300 font-mono">$184,500</span>
+                <span className="text-[10px] text-cyan-400 block mt-1">✓ ReportLab PDF Invoices</span>
+              </div>
+              <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+                <span className="text-xs font-mono text-slate-400 block mb-1">API Throughput</span>
+                <span className="text-xl font-bold text-emerald-300 font-mono">&lt; 45ms / Req</span>
+                <span className="text-[10px] text-emerald-400 block mt-1">✓ JWT Auth Protected</span>
+              </div>
+            </div>
+
+            <div className="p-4 rounded-xl bg-slate-900 border border-cyan-500/20 text-xs text-slate-300 space-y-2">
+              <div className="font-mono text-cyan-400 font-semibold mb-2">Integrated Sub-Modules:</div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px] font-mono">
+                <div className="p-2 rounded bg-slate-800/60 border border-slate-700 text-center">📦 Inventory Control</div>
+                <div className="p-2 rounded bg-slate-800/60 border border-slate-700 text-center">💼 HR & Payroll</div>
+                <div className="p-2 rounded bg-slate-800/60 border border-slate-700 text-center">🛒 Sales & Orders</div>
+                <div className="p-2 rounded bg-slate-800/60 border border-slate-700 text-center">📄 PDF Report Engine</div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* General Project Stats if present */}
+        {project.demoData && project.demoData.stats && project.id !== 'steel-properties-predictive' && project.id !== 'enterprise-erp-system' && (
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+            {project.demoData.stats.map((st, sIdx) => (
+              <div key={sIdx} className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+                <span className="text-xs font-mono text-slate-400 block mb-1">{st.label}</span>
+                <span className="text-xl font-bold text-cyan-300 font-mono">{st.val}</span>
+              </div>
+            ))}
+          </div>
+        )}
+
         {/* Tech Stack Pills */}
         <div>
           <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-3">
